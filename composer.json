@@ -1,0 +1,18 @@
+{
+  "name": "rallyphp/rally",
+  "description": "Real-time table tennis app",
+  "keywords": ["table-tennis", "ping-pong"],
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/rallyphp/rally/issues"
+  },
+  "require": {
+    "php": ">=5.6",
+    "cboden/ratchet": "^0.3.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Rally\\": "src/"
+    }
+  }
+}
