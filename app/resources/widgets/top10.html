@@ -1,0 +1,27 @@
+{% extends "widgets/widget.html" %}
+
+{% block widgetcontent %}
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Player</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for player in top10 %}
+      <tr>
+        <td>{{ player.rank }}</td>
+        <td>
+          <a href="/players/{{ player.id }}">
+            <img src="{{ player.avatarUrl }}" class="img-circle" alt="{{ player.name }}'s avatar">
+            {{ player.name }}
+          </a>
+        </td>
+        <td>{{ player.rating }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

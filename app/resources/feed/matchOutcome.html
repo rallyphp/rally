@@ -1,0 +1,15 @@
+{% extends "feed/feedItem.html" %}
+
+{% block feedItemTitle %}Brandi defeated Derrick (2 - 1){% endblock %}
+
+{% block feedItemContent %}
+  {% include "matchSummary.html" %}
+{% endblock %}
+
+{% block feedItemMedia %}
+  <div class="media-right">
+    <a href="#">
+      <i class="fa fa-fw fa-2x fa-trophy"></i>
+    </a>
+  </div>
+{% endblock %}

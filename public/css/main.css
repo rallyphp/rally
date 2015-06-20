@@ -1,0 +1,156 @@
+/*html {
+  background: url(/img/bg.jpg);
+  height: 100%;
+}*/
+
+body {
+  /*background-color: rgba(0, 0, 0, 0.6);*/
+  font-family: Roboto, Noto, sans-serif;
+  /*height: 100%;*/
+  padding-top: 70px;
+}
+
+.table-container {
+  display: table;
+}
+
+.table-container .table-row {
+  display: table-row;
+  height: 100%;
+}
+
+.table-container .table-row .table-col {
+  display: table-cell;
+  float: none;
+  vertical-align: top;
+}
+
+.player-display {
+  text-align: center;
+}
+
+.player-score {
+  font-size: 7rem;
+}
+
+.player-name {
+  font-size: 3.5rem;
+}
+
+#match-summary {
+  font-size: 1.25rem;
+  margin: 0 auto;
+}
+
+#match-summary th,
+#match-summary td {
+  padding: 0.5em;
+  text-align: center;
+}
+
+#match-summary thead th {
+  padding-top: 0;
+}
+
+#match-summary tbody th,
+#match-summary tbody td {
+  height: 3em;
+  width: 3em;
+}
+
+#match-summary th.name {
+  height: auto;
+  text-align: left;
+  width: auto;
+}
+
+#match-summary .numeric {
+  text-align: right;
+}
+
+#match-summary .match-score {
+  border-right: 3px solid rgba(0, 0, 0, 0.87);
+}
+
+.pink {
+  background-color: #e91e63;
+  color: #fff;
+}
+
+.blue {
+  background-color: #2196f3;
+  color: #fff;
+}
+
+.green {
+  background-color: #4caf50;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.deep-orange {
+  background-color: #ff5722;
+  color: #fff;
+}
+
+.blue.light {
+  background-color: #90caf9;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.blue.dark {
+  /*background-color: #0d47a1;*/
+  background-color: #1565c0;
+  color: #fff;
+}
+
+.deep-orange.light {
+  background-color: #ffab91;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.deep-orange.dark {
+  /*background-color: #bf360c;*/
+  background-color: #d84315;
+  color: #fff;
+}
+
+.match-summary thead th {
+  background-color: rgba(0, 0, 0, 0.87);
+  color: rgba(255, 255, 255, 1);
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  text-align: center;
+}
+
+.match-summary thead th:first-child {
+  background-color: inherit;
+}
+
+.match-summary thead th:nth-child(2) {
+  border-top-left-radius: 0.5em;
+}
+
+.match-summary thead th:last-child {
+  border-top-right-radius: 0.5em;
+}
+
+.match-summary thead th {
+  font-size: 1rem;
+}
+
+.match-summary tbody {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.match-summary tbody th {
+  padding-right: 1rem;
+}
+
+.match-summary tbody th,
+.match-summary tbody td {
+  padding: 0.5rem 1rem;
+}
+
+.match-summary tbody td {
+  text-align: center;
+}

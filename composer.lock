@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "93e18bad1684f015e906e5136a71a651",
+    "hash": "24d18b8cc84caab51d4b8b75323e8062",
     "packages": [
         {
             "name": "cboden/ratchet",
@@ -99,6 +99,64 @@
                 "event-emitter"
             ],
             "time": "2012-11-02 14:49:47"
+        },
+        {
+            "name": "filp/whoops",
+            "version": "1.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/filp/whoops.git",
+                "reference": "37b5e653c99cbb9113108d7dc59a0ddc306acc46"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/37b5e653c99cbb9113108d7dc59a0ddc306acc46",
+                "reference": "37b5e653c99cbb9113108d7dc59a0ddc306acc46",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Whoops": "src/"
+                },
+                "classmap": [
+                    "src/deprecated"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Filipe Dobreira",
+                    "homepage": "https://github.com/filp",
+                    "role": "Developer"
+                }
+            ],
+            "description": "php error handling for cool kids",
+            "homepage": "https://github.com/filp/whoops",
+            "keywords": [
+                "error",
+                "exception",
+                "handling",
+                "library",
+                "silex-provider",
+                "whoops",
+                "zf2"
+            ],
+            "time": "2015-05-29 15:12:07"
         },
         {
             "name": "guzzle/common",
@@ -303,233 +361,34 @@
             "time": "2014-05-01 21:36:02"
         },
         {
-            "name": "guzzlehttp/psr7",
-            "version": "1.0.0",
+            "name": "marekweb/opaque-id",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/guzzle/psr7.git",
-                "reference": "19e510056d8d671d9d9e25dc16937b3dd3802ae6"
+                "url": "https://github.com/marekweb/opaque-id.git",
+                "reference": "a5e375c508142ae6e710bf03bdbcb05624c48a15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/19e510056d8d671d9d9e25dc16937b3dd3802ae6",
-                "reference": "19e510056d8d671d9d9e25dc16937b3dd3802ae6",
+                "url": "https://api.github.com/repos/marekweb/opaque-id/zipball/a5e375c508142ae6e710bf03bdbcb05624c48a15",
+                "reference": "a5e375c508142ae6e710bf03bdbcb05624c48a15",
                 "shasum": ""
             },
-            "require": {
-                "php": ">=5.4.0",
-                "psr/http-message": "^1.0"
-            },
-            "provide": {
-                "psr/http-message-implementation": "1.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.0"
-            },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Psr7\\": "src/"
-                },
                 "files": [
-                    "src/functions.php"
+                    "OpaqueEncoder.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
             "authors": [
                 {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
+                    "name": "Marek",
+                    "email": "marek@marekweb.com"
                 }
             ],
-            "description": "PSR-7 message implementation",
-            "keywords": [
-                "http",
-                "message",
-                "stream",
-                "uri"
-            ],
-            "time": "2015-05-19 17:58:45"
-        },
-        {
-            "name": "psr/http-message",
-            "version": "1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/http-message.git",
-                "reference": "85d63699f0dbedb190bbd4b0d2b9dc707ea4c298"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-message/zipball/85d63699f0dbedb190bbd4b0d2b9dc707ea4c298",
-                "reference": "85d63699f0dbedb190bbd4b0d2b9dc707ea4c298",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Http\\Message\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
-            "description": "Common interface for HTTP messages",
-            "keywords": [
-                "http",
-                "http-message",
-                "psr",
-                "psr-7",
-                "request",
-                "response"
-            ],
-            "time": "2015-05-04 20:22:00"
-        },
-        {
-            "name": "react/cache",
-            "version": "v0.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/reactphp/cache.git",
-                "reference": "9882ab5d8b00617baae83c6996f5a34668c11beb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/cache/zipball/9882ab5d8b00617baae83c6996f5a34668c11beb",
-                "reference": "9882ab5d8b00617baae83c6996f5a34668c11beb",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0",
-                "react/promise": "~2.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "React\\Cache\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Async caching.",
-            "keywords": [
-                "cache"
-            ],
-            "time": "2014-02-02 01:11:26"
-        },
-        {
-            "name": "react/child-process",
-            "version": "v0.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/reactphp/child-process.git",
-                "reference": "8bf211533bcbb2034e00528a47400367570dc3d7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/child-process/zipball/8bf211533bcbb2034e00528a47400367570dc3d7",
-                "reference": "8bf211533bcbb2034e00528a47400367570dc3d7",
-                "shasum": ""
-            },
-            "require": {
-                "evenement/evenement": "~2.0",
-                "php": ">=5.4.0",
-                "react/event-loop": "0.4.*",
-                "react/stream": "0.4.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "React\\ChildProcess\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Library for executing child processes.",
-            "keywords": [
-                "process"
-            ],
-            "time": "2014-02-02 01:11:26"
-        },
-        {
-            "name": "react/dns",
-            "version": "v0.4.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/reactphp/dns.git",
-                "reference": "8c5ccc35dcb4b06b70eb9201842363fac7b0f3cf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/dns/zipball/8c5ccc35dcb4b06b70eb9201842363fac7b0f3cf",
-                "reference": "8c5ccc35dcb4b06b70eb9201842363fac7b0f3cf",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0",
-                "react/cache": "0.4.*",
-                "react/promise": "~2.0",
-                "react/socket": "0.4.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "React\\Dns\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Async DNS resolver.",
-            "keywords": [
-                "dns",
-                "dns-resolver"
-            ],
-            "time": "2014-04-12 14:09:10"
+            "description": "Opaque ID: Obfuscation scheme for integer IDs",
+            "time": "2014-10-28 20:03:53"
         },
         {
             "name": "react/event-loop",
@@ -575,136 +434,6 @@
             "time": "2014-02-26 17:36:58"
         },
         {
-            "name": "react/http",
-            "version": "v0.4.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/reactphp/http.git",
-                "reference": "f575989d67b7db0a65f5dd7e431d8f47af6c2f7b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/http/zipball/f575989d67b7db0a65f5dd7e431d8f47af6c2f7b",
-                "reference": "f575989d67b7db0a65f5dd7e431d8f47af6c2f7b",
-                "shasum": ""
-            },
-            "require": {
-                "evenement/evenement": "^2.0",
-                "guzzlehttp/psr7": "^1.0",
-                "php": ">=5.4.0",
-                "react/socket": "^0.4",
-                "react/stream": "^0.4"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.5-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "React\\Http\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Library for building an evented http server.",
-            "keywords": [
-                "http"
-            ],
-            "time": "2015-05-21 20:12:09"
-        },
-        {
-            "name": "react/http-client",
-            "version": "v0.4.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/reactphp/http-client.git",
-                "reference": "f382515e409dd16f336b74d5f8eb3df451280541"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/http-client/zipball/f382515e409dd16f336b74d5f8eb3df451280541",
-                "reference": "f382515e409dd16f336b74d5f8eb3df451280541",
-                "shasum": ""
-            },
-            "require": {
-                "evenement/evenement": "~2.0",
-                "guzzle/parser": "~3.0",
-                "php": ">=5.4.0",
-                "react/dns": "0.4.*",
-                "react/event-loop": "0.4.*",
-                "react/socket-client": "0.4.*",
-                "react/stream": "0.4.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.5-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "React\\HttpClient\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Asynchronous HTTP client library.",
-            "keywords": [
-                "http"
-            ],
-            "time": "2015-06-15 19:11:29"
-        },
-        {
-            "name": "react/promise",
-            "version": "v2.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/reactphp/promise.git",
-                "reference": "365fcee430dfa4ace1fbc75737ca60ceea7eeeef"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise/zipball/365fcee430dfa4ace1fbc75737ca60ceea7eeeef",
-                "reference": "365fcee430dfa4ace1fbc75737ca60ceea7eeeef",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "React\\Promise\\": "src/"
-                },
-                "files": [
-                    "src/functions_include.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jan Sorgalla",
-                    "email": "jsorgalla@googlemail.com"
-                }
-            ],
-            "description": "A lightweight implementation of CommonJS Promises/A for PHP",
-            "time": "2014-12-30 13:32:42"
-        },
-        {
             "name": "react/socket",
             "version": "v0.4.2",
             "source": {
@@ -744,48 +473,6 @@
                 "Socket"
             ],
             "time": "2014-05-25 17:02:16"
-        },
-        {
-            "name": "react/socket-client",
-            "version": "v0.4.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/reactphp/socket-client.git",
-                "reference": "1375dac21b1881cba31c2b38f412dc039566673f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/socket-client/zipball/1375dac21b1881cba31c2b38f412dc039566673f",
-                "reference": "1375dac21b1881cba31c2b38f412dc039566673f",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0",
-                "react/dns": "0.4.*",
-                "react/event-loop": "0.4.*",
-                "react/promise": "~2.0",
-                "react/stream": "0.4.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "React\\SocketClient\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Async connector to open TCP/IP and SSL/TLS based connections.",
-            "keywords": [
-                "Socket"
-            ],
-            "time": "2015-03-20 15:24:06"
         },
         {
             "name": "react/stream",
@@ -834,6 +521,105 @@
                 "stream"
             ],
             "time": "2014-09-10 03:32:31"
+        },
+        {
+            "name": "slim/slim",
+            "version": "2.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/slimphp/Slim.git",
+                "reference": "20a02782f76830b67ae56a5c08eb1f563c351a37"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/slimphp/Slim/zipball/20a02782f76830b67ae56a5c08eb1f563c351a37",
+                "reference": "20a02782f76830b67ae56a5c08eb1f563c351a37",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "suggest": {
+                "ext-mcrypt": "Required for HTTP cookie encryption"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Slim": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Josh Lockhart",
+                    "email": "info@joshlockhart.com",
+                    "homepage": "http://www.joshlockhart.com/"
+                }
+            ],
+            "description": "Slim Framework, a PHP micro framework",
+            "homepage": "http://github.com/codeguy/Slim",
+            "keywords": [
+                "microframework",
+                "rest",
+                "router"
+            ],
+            "time": "2015-03-08 18:41:17"
+        },
+        {
+            "name": "slim/views",
+            "version": "0.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/slimphp/Slim-Views.git",
+                "reference": "8561c785e55a39df6cb6f95c3aba3281a60ed5b0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/slimphp/Slim-Views/zipball/8561c785e55a39df6cb6f95c3aba3281a60ed5b0",
+                "reference": "8561c785e55a39df6cb6f95c3aba3281a60ed5b0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "slim/slim": ">=2.4.0"
+            },
+            "suggest": {
+                "smarty/smarty": "Smarty templating system",
+                "twig/twig": "Twig templating system"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Slim\\Views\\": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Josh Lockhart",
+                    "email": "info@joshlockhart.com",
+                    "homepage": "http://www.joshlockhart.com/"
+                },
+                {
+                    "name": "Andrew Smith",
+                    "email": "a.smith@silentworks.co.uk",
+                    "homepage": "http://thoughts.silentworks.co.uk/"
+                }
+            ],
+            "description": "Smarty and Twig View Parser package for the Slim Framework",
+            "homepage": "http://github.com/codeguy/Slim-Views",
+            "keywords": [
+                "extensions",
+                "slimphp",
+                "templating"
+            ],
+            "time": "2014-12-09 23:48:51"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -1016,14 +802,172 @@
                 "url"
             ],
             "time": "2015-06-11 17:20:40"
+        },
+        {
+            "name": "twig/twig",
+            "version": "v1.18.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/Twig.git",
+                "reference": "e8e6575abf6102af53ec283f7f14b89e304fa602"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/e8e6575abf6102af53ec283f7f14b89e304fa602",
+                "reference": "e8e6575abf6102af53ec283f7f14b89e304fa602",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.18-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Twig_": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Armin Ronacher",
+                    "email": "armin.ronacher@active-4.com",
+                    "role": "Project Founder"
+                },
+                {
+                    "name": "Twig Team",
+                    "homepage": "http://twig.sensiolabs.org/contributors",
+                    "role": "Contributors"
+                }
+            ],
+            "description": "Twig, the flexible, fast, and secure template language for PHP",
+            "homepage": "http://twig.sensiolabs.org",
+            "keywords": [
+                "templating"
+            ],
+            "time": "2015-06-06 23:31:24"
+        },
+        {
+            "name": "vlucas/phpdotenv",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vlucas/phpdotenv.git",
+                "reference": "91064290f5b53a09bdff1b939d7f69fb0e7531b5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/91064290f5b53a09bdff1b939d7f69fb0e7531b5",
+                "reference": "91064290f5b53a09bdff1b939d7f69fb0e7531b5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dotenv\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Vance Lucas",
+                    "email": "vance@vancelucas.com",
+                    "homepage": "http://www.vancelucas.com"
+                }
+            ],
+            "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
+            "homepage": "http://github.com/vlucas/phpdotenv",
+            "keywords": [
+                "dotenv",
+                "env",
+                "environment"
+            ],
+            "time": "2015-05-30 16:15:01"
+        },
+        {
+            "name": "zeuxisoo/slim-whoops",
+            "version": "0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zeuxisoo/php-slim-whoops.git",
+                "reference": "da0250b0d1211bd90c5ab7e8cf7c3925e8376095"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zeuxisoo/php-slim-whoops/zipball/da0250b0d1211bd90c5ab7e8cf7c3925e8376095",
+                "reference": "da0250b0d1211bd90c5ab7e8cf7c3925e8376095",
+                "shasum": ""
+            },
+            "require": {
+                "filp/whoops": "1.*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "filp/whoops": "1.*",
+                "phpunit/phpunit": "3.7.*@dev",
+                "slim/slim": "2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Zeuxisoo\\Whoops\\Provider\\Slim\\WhoopsMiddleware": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Zeuxis Lo",
+                    "email": "seekstudio@gmail.com",
+                    "homepage": "http://www.chair.im/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP whoops error on slim framework",
+            "homepage": "https://github.com/zeuxisoo/php-slim-whoops/",
+            "keywords": [
+                "error",
+                "exception",
+                "slim",
+                "whoops"
+            ],
+            "time": "2014-11-06 06:47:24"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "marekweb/opaque-id": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=5.6"
+    },
     "platform-dev": []
 }

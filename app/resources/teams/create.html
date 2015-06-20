@@ -1,0 +1,53 @@
+{% extends "baseLoggedIn.html" %}
+
+{% block title %}Create a team - Rally{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" href="/css/jquery.simplecolorpicker.css">
+  <link rel="stylesheet" href="/css/jquery.simplecolorpicker-fontawesome.css">
+{% endblock %}
+
+{% block js %}
+  <script src="/js/jquery.simplecolorpicker.js"></script>
+  <script>
+    $(function() {
+      $('select[name="color"]').simplecolorpicker({ theme: 'fontawesome' });
+    });
+  </script>
+{% endblock %}
+
+{% block content %}
+  <form>
+    <div class="form-group">
+      <input name="name" type="text" class="form-control" placeholder="Team Name" required autofocus>
+    </div>
+    <div class="form-group">
+      <select name="color" class="form-control">
+        <option value="#f44336">Red</option>
+        <option value="#e91e63">Pink</option>
+        <option value="#9c27b0">Purple</option>
+        <option value="#673ab7">Deep Purple</option>
+        <option value="#3f51b5">Indigo</option>
+        <option value="#2196f3">Blue</option>
+        <option value="#03a9f4">Light Blue</option>
+        <option value="#00bcd4">Cyan</option>
+        <option value="#009688">Teal</option>
+        <option value="#4caf50">Green</option>
+        <option value="#8bc34a">Light Green</option>
+        <option value="#cddc39">Lime</option>
+        <option value="#ffeb3b">Yellow</option>
+        <option value="#ffc107">Amber</option>
+        <option value="#ff9800">Orange</option>
+        <option value="#ff5722">Deep Orange</option>
+        <option value="#795548">Brown</option>
+        <option value="#9e9e9e">Grey</option>
+        <option value="#607d8b">Blue Grey</option>
+      </select>
+    </div>
+    <div class="pull-right">
+      <button type="submit" class="btn btn-primary">
+        <i class="fa fa-arrow-right"></i> Create
+      </button>
+    </div>
+  </form>
+{% endblock %}
