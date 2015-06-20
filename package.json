@@ -1,0 +1,25 @@
+{
+  "name": "rally",
+  "version": "0.0.1",
+  "description": "A real-time table tennis app",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rallyphp/rally.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rallyphp/rally/issues"
+  },
+  "homepage": "https://github.com/rallyphp/rally#readme",
+  "dependencies": {
+    "angular": "^1.4.1"
+  }
+}
