@@ -43,7 +43,7 @@
         </md-button>
         <md-menu md-position-mode="target-right target">
           <md-button ng-click="$mdOpenMenu()">
-            <img alt="Derrick" ng-src="https://secure.gravatar.com/avatar/ccb9a545ca57bb5285c03c2ccf061e18?s=24&d=mm" class="md-avatar" style="vertical-align: middle;">
+            <gravatar name="Derrick" email-hash="ccb9a545ca57bb5285c03c2ccf061e18" size="24" class="md-avatar" style="vertical-align: middle;"></gravatar>
             <span style="text-transform: none;">Derrick</span>
           </md-button>
           <md-menu-content>
@@ -102,7 +102,7 @@
               <md-tab-body>
                 <md-list>
                   <md-list-item class="md-2-line" ng-repeat="player in singles">
-                  <img alt="{{player.firstName}}" ng-src="{{player.avatar}}" class="md-avatar">
+                    <gravatar name="{{ player.firstName }}" email-hash="{{ player.emailHash }}" size="40" class="md-avatar"></gravatar>
                     <div class="md-list-item-text">
                       <h3>{{player.firstName}} <md-icon>arrow_drop_up</md-icon></h3>
                       <p>{{player.rating}} (+3)</p>

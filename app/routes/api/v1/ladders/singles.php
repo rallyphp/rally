@@ -5,10 +5,10 @@ $app->get('/top10', function () use ($app) {
 
     $query = <<<SQL
 SELECT id,
+  email,
   first_name,
   last_name,
-  ROUND(rating - 3 * uncertainty, 3) rating,
-  email
+  ROUND(rating - 3 * uncertainty, 3) rating
 FROM players
 ORDER BY rating - 3 * uncertainty DESC
 LIMIT 10
@@ -20,13 +20,10 @@ SQL;
     foreach ($st as $row) {
         $players[] = [
             'id' => $encoder->encode($row['id']),
+            'emailHash' => md5($row['email']),
             'firstName' => $row['first_name'],
             'lastName' => $row['last_name'],
-            'rating' => $row['rating'],
-            'avatar' => sprintf(
-                'https://secure.gravatar.com/avatar/%s?s=40&d=mm',
-                md5($row['email'])
-            )
+            'rating' => $row['rating']
         ];
     }
 
