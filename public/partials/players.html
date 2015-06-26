@@ -1,0 +1,14 @@
+<md-content>
+  <h1>Players</h1>
+  <md-list>
+    <md-list-item ng-repeat="player in players">
+      <img alt="{{player.fullName}}" ng-src="{{player.avatar}}" class="md-avatar">
+      <div class="md-list-item-text">
+        <h3>{{player.firstName}} {{player.lastName}}</h3>
+      </div>
+    </md-list-item>
+  </md-list>
+  <md-button class="md-fab" aria-label="Add Player" ng-click="go('/players/add')">
+    <md-icon>add</md-icon>
+  </md-button>
+</md-content>

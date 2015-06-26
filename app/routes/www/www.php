@@ -1,7 +1,5 @@
 <?php
 $app->get('/', function () use ($app) {
-    session_start();
-
     if (!isset($_SESSION['id'])) {
         $app->redirect('/login');
     }
@@ -95,8 +93,6 @@ SQL;
     $row = $st->fetch();
 
     if (password_verify($password, $row['password'])) {
-        session_start();
-
         $_SESSION['id'] = $row['id'];
         $_SESSION['email'] = $row['email'];
         $_SESSION['firstName'] = $row['first_name'];
@@ -183,8 +179,6 @@ SQL;
 
     $id = $conn->lastInsertId();
 
-    session_start();
-
     $_SESSION['id'] = $id;
     $_SESSION['email'] = $email;
     $_SESSION['firstName'] = $firstName;
@@ -194,8 +188,6 @@ SQL;
 });
 
 $app->get('/logout', function () use ($app) {
-    session_start();
-
     $_SESSION = [];
     $params = session_get_cookie_params();
     setcookie(
@@ -239,8 +231,6 @@ SQL;
     }
 
     $encoder = new OpaqueEncoder('im a little teapot');
-
-    session_start();
 
     $app->render('players/settings/settings.html', [
         'avatarUrl' => sprintf(

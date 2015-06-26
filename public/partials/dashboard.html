@@ -1,0 +1,13 @@
+<md-content>
+  <md-list>
+    <md-list-item class="md-2-line" ng-repeat="item in feedItems">
+      <div class="md-list-item-text">
+        <h3>{{item.title}}</h3>
+        <p>{{item.content}}</p>
+      </div>
+      <md-icon>thumb_down</md-icon>
+      <md-icon>thumb_up</md-icon>
+      <md-divider ng-if="!$last"></md-divider>
+    </md-list-item>
+  </md-list>
+</md-content>

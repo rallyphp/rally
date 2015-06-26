@@ -1,0 +1,60 @@
+<md-content layout-padding>
+  <div layout="row">
+    <div layout="column">
+      <gravatar name="{{ player.firstName }}" email-hash="{{ player.emailHash }}" size="128"></gravatar>
+    </div>
+    <div layout="column" flex>
+      <md-input-container>
+        <label>Email</label>
+        <input type="email" ng-model="player.email">
+      </md-input-container>
+      <div layout="row">
+        <md-input-container>
+          <label>First Name</label>
+          <input ng-model="player.firstName">
+        </md-input-container>
+        <md-input-container>
+          <label>Last Name</label>
+          <input ng-model="player.lastName">
+        </md-input-container>
+      </div>
+    </div>
+  </div>
+  <md-subheader>Notifications</md-subheader>
+  <md-switch>Activate text messaging</md-switch>
+  <div layout="row">
+    <md-input-container>
+      <label>Mobile Phone</label>
+      <input type="tel" ng-model="player.phone">
+    </md-input-container>
+    <md-select placeholder="Carrier" ng-model="player.carrier">
+      <md-option value="vzw">Verizon</md-option>
+      <md-option value="att">AT&amp;T</md-option>
+      <md-option value="spr">Sprint</md-option>
+      <md-option value="tmo">T-Mobile</md-option>
+    </md-select>
+    <md-input-container>
+      <label>Confirmation Code</label>
+      <input ng-model="confirmCode">
+    </md-input-container>
+  </div>
+  <md-list>
+    <md-list-item>
+      <md-switch ng-model="notifications.challenges">Challenges</md-switch>
+    </md-list-item>
+    <md-list-item>
+      <md-switch ng-model="notifications.tournaments">Tournaments</md-switch>
+    </md-list-item>
+  </md-list>
+  <md-subheader>Change Password</md-subheader>
+  <md-content layout-padding>
+    <md-input-container>
+      <label>Old Password</label>
+      <input type="password" ng-model="oldPassword">
+    </md-input-container>
+    <md-input-container>
+      <label>New Password</label>
+      <input type="password" ng-model="newPassword">
+    </md-input-container>
+  </md-content>
+</md-content>
