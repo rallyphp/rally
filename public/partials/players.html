@@ -1,7 +1,7 @@
 <md-content layout-padding>
   <h1>Players</h1>
   <md-list>
-    <md-list-item ng-repeat="player in players">
+  <md-list-item ng-repeat="player in players" ng-click="go('/profile/' + player.id)">
       <gravatar name="{{ player.fullName }}" email-hash="{{ player.emailHash }}" size="40" class="md-avatar"></gravatar>
       <div class="md-list-item-text">
         <h3>{{ player.firstName }} {{ player.lastName }}</h3>

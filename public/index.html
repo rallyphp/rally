@@ -101,12 +101,13 @@
               <md-tab-label><md-icon>person</md-icon> Singles</md-tab-label>
               <md-tab-body>
                 <md-list>
-                  <md-list-item class="md-2-line" ng-repeat="player in singles">
+                  <md-list-item ng-repeat="player in singles" ng-click="go('/profile/' + player.id)">
                     <gravatar name="{{ player.firstName }}" email-hash="{{ player.emailHash }}" size="40" class="md-avatar"></gravatar>
-                    <div class="md-list-item-text">
-                      <h3>{{player.firstName}} <md-icon>arrow_drop_up</md-icon></h3>
-                      <p>{{player.rating}} (+3)</p>
-                    </div>
+                    <p>
+                    {{ player.firstName }} <md-icon>arrow_drop_up</md-icon><br>
+                      <small>{{ player.rating }} (+3)</small>
+                    </p>
+                    <md-icon>message</md-icon>
                   </md-list-item>
                 </md-list>
               </md-tab-body>
@@ -116,10 +117,10 @@
               <md-tab-body>
                 <md-list>
                   <md-list-item class="md-2-line" ng-repeat="team in doubles">
-                  <img alt="{{team.name}}" ng-src="{{team.avatar}}" class="md-avatar">
+                  <img alt="{{ team.name }}" ng-src="{{ team.avatar }}" class="md-avatar">
                     <div class="md-list-item-text">
-                      <h3>{{team.name}} <md-icon>arrow_drop_up</md-icon></h3>
-                      <p>{{team.rating}} (+3)</p>
+                      <h3>{{ team.name }} <md-icon>arrow_drop_up</md-icon></h3>
+                      <p>{{ team.rating }} (+3)</p>
                     </div>
                   </md-list-item>
                 </md-list>
@@ -129,7 +130,6 @@
         </md-content>
         <!--</md-sidenav>-->
     </div>
-<script src="/js/md5.js"></script>
     <script src="/js/main.min.js"></script>
   </body>
 </html>

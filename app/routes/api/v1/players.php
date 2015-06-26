@@ -3,19 +3,9 @@ $app->post('/', function () use ($app) {
     $encoder = new OpaqueEncoder(getenv('ID_ENCODER_KEY'));
     $db = db();
 
-    $organizationId = $app->request->post('organization-id');
-    $email = strtolower(trim($app->request->post('signup-email')));
-    $password = trim($app->request->post('signup-password'));
+    $leagueId = $app->request->post('league-id');
     $firstName = trim($app->request->post('first-name'));
     $lastName = trim($app->request->post('last-name'));
-
-    if ($email === '') {
-        $app->halt(400);
-    }
-
-    if ($password === '') {
-        $app->halt(400);
-    }
 
     if ($firstName === '') {
         $app->halt(400);
@@ -25,48 +15,25 @@ $app->post('/', function () use ($app) {
         $app->halt(400);
     }
 
-    $email = filter_var($email, FILTER_VALIDATE_EMAIL);
-
-    if ($email === false) {
-        $app->halt(400);
-    }
-
-    $password = password_hash($password, PASSWORD_DEFAULT);
-
-    if ($password === false) {
-        $app->halt(500);
-    }
-
     $query = <<<SQL
 INSERT INTO players (
-  organization_id,
-  email,
-  password,
+  league_id,
   first_name,
   last_name
 ) VALUES (
   :v0,
   :v1,
-  :v2,
-  :v3,
-  :v4
+  :v2
 )
 SQL;
 
     $st = $db->query($query, [
-        ':v0' => $organizationId,
-        ':v1' => $email,
-        ':v2' => $password,
-        ':v3' => $firstName,
-        ':v4' => $lastName
+        ':v0' => $leagueId,
+        ':v1' => $firstName,
+        ':v2' => $lastName
     ]);
 
     $id = $db->lastInsertId();
-
-    $_SESSION['id'] = $id;
-    $_SESSION['email'] = $email;
-    $_SESSION['firstName'] = $firstName;
-    $_SESSION['lastName'] = $lastName;
 
     $response = $app->response();
     $response->setStatus(201);
@@ -112,7 +79,9 @@ $app->get('/:id', function ($id) use ($app) {
     $query = <<<SQL
 SELECT *
 FROM players
-WHERE id = :w0
+LEFT JOIN users
+  ON players.user_id = users.id
+WHERE players.id = :w0
 SQL;
 
     $st = $db->query($query, [

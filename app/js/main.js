@@ -35,6 +35,10 @@ app.config(function($routeProvider, $mdThemingProvider) {
       controller: 'TournamentsCtrl',
       templateUrl: 'partials/tournaments.html'
     })
+    .when('/profile/:id', {
+      controller: 'ProfileCtrl',
+      templateUrl: 'partials/profile.html'
+    })
     .otherwise('/');
 
   //$locationProvider.html5Mode(true);
@@ -59,6 +63,8 @@ app.controller('SettingsCtrl', ['$scope', '$resource', require('./SettingsCtrl')
 app.controller('TeamsCtrl', ['$scope', '$resource', require('./TeamsCtrl')]);
 app.controller('MatchesCtrl', ['$scope', '$resource', require('./MatchesCtrl')]);
 app.controller('TournamentsCtrl', ['$scope', '$resource', require('./TournamentsCtrl')]);
+
+app.controller('ProfileCtrl', ['$scope', '$resource', '$routeParams', require('./ProfileCtrl')]);
 
 app.directive('gravatar', function() {
   return {

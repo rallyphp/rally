@@ -72,6 +72,14 @@ $app->get('/session', function() use ($app) {
     $response->setBody(json_encode($user));
 });
 
+$app->group('/users', function () use ($app) {
+    require __DIR__ . '/users.php';
+});
+
+$app->group('/leagues', function () use ($app) {
+    require __DIR__ . '/leagues.php';
+});
+
 $app->group('/players', function () use ($app) {
     require __DIR__ . '/players.php';
 });
@@ -86,6 +94,10 @@ $app->group('/matches', function () use ($app) {
 
 $app->group('/games', function () use ($app) {
     require __DIR__ . '/games.php';
+});
+
+$app->group('/tournaments', function () use ($app) {
+    require __DIR__ . '/tournaments.php';
 });
 
 $app->group('/ladders', function () use ($app) {
